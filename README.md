@@ -249,6 +249,24 @@ npx skills add https://github.com/googleworkspace/cli/tree/main/skills/gws-gmail
 ```
 
 <details>
+<summary>Factory Droid setup</summary>
+
+```bash
+# Install all skills via the skills CLI
+npx skills add https://github.com/googleworkspace/cli -a droid
+
+# Or symlink all skills (stays in sync with repo)
+ln -s $(pwd)/skills/gws-* ~/.factory/skills/
+
+# Or copy specific skills
+cp -r skills/gws-drive skills/gws-gmail .factory/skills/
+```
+
+Factory Droid automatically discovers skills from `.factory/skills/` (project) and `~/.factory/skills/` (personal). See the [Factory Droid Skills Documentation](https://docs.factory.ai/cli/configuration/skills) for details.
+
+</details>
+
+<details>
 <summary>OpenClaw setup</summary>
 
 ```bash
